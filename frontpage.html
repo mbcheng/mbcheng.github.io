@@ -1,0 +1,692 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Michelle Cheng, BUID: U04856575">
+  <meta name="keywords" content="Haruki Murakami Music Playlist Boston University'"> 
+  <meta name="description" content="Final Project">
+  
+  <title>Murakami Music Playlist</title>
+  
+  <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
+  <link href='https://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
+  <link href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css" rel="stylesheet" type="text/css">
+  <link href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" type="text/css" href="../portfolio/css/murakami.css">
+
+  <link rel="shortcut icon" href="favicon.ico"/>
+
+  
+  <script> // fade in description and playlists
+
+    $(document).ready(function() {
+    $("div#img1").click(function() {
+      $("div#description1, table#playlist1, div.player1").fadeToggle('slow');
+    });
+  });
+
+    $(document).ready(function() {
+    $("div#img2").click(function() {
+      $("div#description2, table#playlist2, div.player2").fadeToggle('slow');
+    });
+  });
+
+    $(document).ready(function() {
+    $("div#img3").click(function() {
+      $("div#description3, table#playlist3, div.player3").fadeToggle('slow');
+    });
+  });
+
+    $(document).ready(function() {
+    $("div#img4").click(function() {
+      $("div#description4, table#playlist4, div.player4").fadeToggle('slow');
+    });
+  });
+
+  </script>
+
+  <script> // drop all except the one that is clicked
+$(".all" ).click(function() {
+    $('.all').not($(this)).toggle('drop')
+  });
+</script>
+
+
+
+<script>
+$(function() { // fade in a href links
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+</script>
+
+ 
+ </head>
+<body>
+
+<div class="coverimage">
+<div class="heading">
+<img src="media/spinning.gif">
+<br>
+<a href="#begin">THE MURAKAMI WORLD OF MUSIC</a>
+<hr>
+<div class="cat"><img src="media/Black_Cat.png" width-max="150" height="200"></div>
+</div>
+
+
+<div class="flex-container"> <!--images of records-->
+
+<div class="common" id="img1"><img src="media/sheeprecord.png" id="img1" width-max="200" height="250" alt="awildsheepchasecover"></div>
+<div class="common" id="img2"><img src="media/1q84record.png" id="img2" width-max="200" height="250" alt="1Q84cover"></div>
+<div class="common" id="img3"><img src="media/sputnikrecord.png" id="img3" width-max="200" height="250" alt="sputniksweetheartcover"></div>
+<div class="common" id="img4"><img src="media/norwegianrecord.png" id="img4" width-max="200" height="250" alt="norwegianwoodcover"></div>
+
+</div>
+
+<div id="begin">
+
+<div class="littlebg"> <!--murakami music background-->
+<div class="text"> 
+<hr>
+Renowned Japanese author Haruki Murakami says he owns over <a href="http://www.nytimes.com/2011/10/23/magazine/the-fierce-imagination-of-haruki-murakami.html?pagewanted=5&ref=baseball&_r=0">10,000 records</a>. He often references Western music artists and songs – particularly in the genres of classical, jazz, and American pop – in his stories. His first job was at a record store. Before he became an author, Murakami ran a jazz bar called the Peter Cat in Tokyo with his wife.
+ <a href="#begin2">
+ <p><div class="arrow"></div></p>
+ </a>
+</div>
+
+
+
+<script> // simple music playlist with play and pause
+$(function() {
+    $(".playBtn").on('click', function() {
+       var target = $(this).attr("target");
+       $("#audio").attr("src",target);
+       $("#audio").trigger("play");
+    });
+
+    $(".pauseBtn").on('click', function() {
+       $("#audio").trigger("pause");
+    });  
+});
+</script>
+
+
+
+
+<table id="playlist1" style="display:none">
+<div class="player1" style="display:none">
+    <audio id="audio" preload="none" tabindex="0" controls loop>
+      <source src="audio/wildsheep/op10inDminor.mp3">
+      <source src="audio/wildsheep/CanoninDmajor.mp3">
+     </audio>
+</div>
+<tr>
+  <th>SONG</th>
+  <th>DURATION</th>
+  <th>ARTIST</th>
+</tr>
+<tr>
+  <td><a href="audio/wildsheep/op10inDminor.mp3">Ballade Op.10 No. 1 In D Minor</a></td>
+  <td>6:15</td>
+  <td>Johannes Brahms</td>
+  <td> 
+    <img class="playBtn" target="audio/wildsheep/op10inDminor.mp3" id="play" src="media/play.png"></td>
+   <td> <img class="pauseBtn" style="display:hidden" src="media/bars.png">
+  </td>
+</tr>
+<tr>
+  <td><a href="audio/wildsheep/CanoninDmajor.mp3"> Canon in D Major</a></td>
+  <td>6:15</td>
+  <td>Johann Pachelbel</td>
+  <td><img class="playBtn"  id="play" src="media/play.png" target="audio/wildsheep/CanoninDmajor.mp3"></td><td><img class="pauseBtn" style="display:hidden" src="media/bars.png">
+  </td>
+<td>
+<tr>
+  <td><a href="audio/wildsheep/elephantgun.mp3">Elephant Gun</a></td>
+  <td>4:32</td>
+  <td>Beirut</td>
+  <td><img class="playBtn" target="audio/wildsheep/elephantgun.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" style="display:hidden" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/wildsheep/johnnybgood.mp3">Johnny B. Good</a></td>
+  <td>2:31</td>
+  <td>Johnny Rivers</td>
+  <td><img class="playBtn" target="audio/wildsheep/johnnybgood.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" style="display:hidden" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/wildsheep/midnightspecial.mp3">Midnight Special</a></td>
+  <td>2:31</td>
+  <td>Johnny Rivers</td>
+  <td><img class="playBtn" target="audio/wildsheep/midnightspecial.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" style="display:hidden" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/wildsheep/perfidia.mp3">Perfidia</a></td>
+  <td>3:22</td>
+  <td>Glenn Miller</td>
+  <td><img class="playBtn" target="audio/wildsheep/perfidia.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" style="display:hidden" src="media/bars.png"></td>
+</tr>
+</table>
+
+
+<table id="playlist2" style="display:none">
+<div class="player2" style="display:none">
+    <audio id="audio" preload="none" tabindex="0" controls loop>
+      <source src="audio/wildsheep/op10inDminor.mp3">
+      <source src="audio/wildsheep/CanoninDmajor.mp3">
+     </audio>
+</div>
+<tr>
+  <th>SONG</th>
+  <th>DURATION</th>
+  <th>ARTIST</th>
+</tr>
+<tr>
+  <td><a href="audio/1q84/misbehavin.mp3">Ain't Misbehavin'</a></td>
+  <td>2:47</td>
+  <td>Benny Goodman</td>
+  <td><img class="playBtn" target="audio/1q84/misbehavin.mp3" id="play" src="media/play.png"></td>
+ <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/aria.mp3">Aria Variata in A Minor</a></td>
+  <td>9:43</td>
+  <td>J.S. Bach</td>
+  <td><img class="playBtn" target="audio/1q84/aria.mp3" src="media/play.png"></td>
+   <td> <img class="pauseBtn" src="media/bars.png"></td>
+<td>
+<tr>
+  <td><a href="audio/1q84/blue.mp3">Atlanta Blues</a></td>
+  <td>4:37</td>
+  <td>Louis Armstrong</td>
+  <td><img class="playBtn" target="audio/1q84/elephantgun.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/billie.mp3">Billie Jean</a></td>
+  <td>4:54</td>
+  <td>Michael Jackson</td>
+  <td><img class="playBtn" target="audio/1q84/billie.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/blues.mp3">Blues My Naughty Sweetie Gives to Me</a></td>
+  <td>5:46</td>
+  <td>Sidney Bechet</td>
+  <td><img class="playBtn" target="audio/1q84/blues.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/canary.mp3">Canary Canary</a></td>
+  <td>4:50</td>
+  <td>Jane Birkin</td>
+  <td><img class="playBtn" target="audio/1q84/canary.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/chantez.mp3">Chantez Les Bas</a></td>
+  <td>4:48</td>
+  <td>Louis Armstrong</td>
+  <td><img class="playBtn" target="audio/1q84/chantez.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+
+</tr>
+<tr>
+  <td><a href="audio/1q84/timbourins.mp3">Concerto 3 Timbourins</a></td>
+  <td>5:03</td>
+  <td>Jean-Philippe Rameau</td>
+  <td><img class="playBtn" target="audio/1q84/1q84.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/concerto1.mp3">Concerto No. 1 in A Minor</a></td>
+  <td>5:03</td>
+  <td>Camille Saint-Saens</td>
+  <td><img class="playBtn" target="audio/1q84/concerto1.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/embraceable.mp3">Embraceable You</a></td>
+  <td>3:08</td>
+  <td>Billie Holiday</td>
+  <td><img class="playBtn" target="audio/1q84/embraceable.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn"  src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/march.mp3">Gotterdammerung II: Funeral March</a></td>
+  <td>8:21</td>
+  <td>Richard Wagner</td>
+  <td><img class="playBtn" target="audio/1q84/march.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/arms.mp3">If You're Ever in My Arms Again</a></td>
+  <td>2:52</td>
+  <td>Duke Ellington</td>
+  <td><img class="playBtn" target="audio/1q84/arms.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/moon.mp3">It's Only a Paper Moon</a></td>
+  <td>3:25</td>
+  <td>Natalie Cole</td>
+  <td><img class="playBtn" target="audio/1q84/moon.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/rose.mp3">La Vie en Rose</a></td>
+  <td>3:25</td>
+  <td>Louis Armstrong</td>
+  <td><img class="playBtn" target="audio/1q84/rose.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/lachrimae.mp3">Lachrimae Antiquae</a></td>
+  <td>4:40</td>
+  <td>Jordi Savall</td>
+  <td><img class="playBtn" target="audio/1q84/lachrimae.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/rooster.mp3">Little Red Rooster</a></td>
+  <td>3:03</td>
+  <td>The Rolling Stones</td>
+  <td><img class="playBtn" target="audio/1q84/rooster.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/hotel.mp3">Riverside Hotel</a></td>
+  <td>4:11</td>
+  <td>Yosui Inoue</td>
+  <td><img class="playBtn" target="audio/1q84/hotel.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/serenade.mp3">Serenade No. 2 in G Minor</a></td>
+  <td>4:11</td>
+  <td>Jean Sibelius</td>
+  <td><img class="playBtn" target="audio/1q84/serenade.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/shinin.mp3">Shinin' On</a></td>
+  <td>5:59</td>
+  <td>Grand Funk Railroad</td>
+  <td><img class="playBtn" target="audio/1q84/shinin.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/sinfonietta.mp3">Sinfonietta</a></td>
+  <td>2:17</td>
+  <td>Leos Janacek</td>
+  <td><img class="playBtn" target="audio/1q84/sinfonietta.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/sing.mp3">Sing, Sing, Sing</a></td>
+  <td>5:05</td>
+  <td>Benny Goodman</td>
+  <td><img class="playBtn" target="audio/1q84/sing.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/savoy.mp3">Stompin' at the Savoy</a></td>
+  <td>3:19</td>
+  <td>Benny Goodman</td>
+  <td><img class="playBtn" target="audio/1q84/savoy.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/sukiyaki.mp3">Sukiyaki</a></td>
+  <td>3:08</td>
+  <td>Kyu Sakamato</td>
+  <td><img class="playBtn" target="audio/1q84/sukiyaki.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/1q84/brown.mp3">Sweat Georgia Brown</a></td>
+  <td>4:48</td>
+  <td>Sidney Bechet</td>
+  <td><img class="playBtn" target="audio/1q84/brown.mp3" src="media/play.png"></td>
+  <td> <img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+</table>
+
+<table id="playlist4" style="display:none">
+<div class="player4" style="display:none">
+    <audio id="audio" preload="none" tabindex="0" controls loop>
+      <source src="audio/wildsheep/op10inDminor.mp3">
+      <source src="audio/wildsheep/CanoninDmajor.mp3">
+     </audio>
+</div>
+<tr>
+  <th>SONG</th>
+  <th>DURATION</th>
+  <th>ARTIST</th>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/love.mp3">And I Love Her</a></td>
+  <td>2:33</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/love.mp3" id="play" src="media/play.png">
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/blackbird.mp3">Blackbird</a></td>
+  <td>2:12</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/blackbird.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+<td>
+<tr>
+  <td><a href="audio/norwegian/close.mp3">Close to You</a></td>
+  <td>3:19</td>
+  <td>Burt Bacharach</td>
+  <td><img class="playBtn" target="audio/norwegian/close.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/dear.mp3">Dear Heart</a></td>
+  <td>2:51</td>
+  <td>Henry Mancini</td>
+  <td><img class="playBtn" target="audio/norwegian/dear.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/desafanido.mp3">Desafanido</a></td>
+  <td>4:14</td>
+  <td>Antonio Carlos Jobim</td>
+  <td><img class="playBtn" target="audio/norwegian/desafanido.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/rigby.mp3">Eleanor Rigby</a></td>
+  <td>2:08</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/rigby.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/jude.mp3">Hey Jude</a></td>
+  <td>8:09</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/jude.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/rose.mp3">Honeysuckle Rose</a></td>
+  <td>5:34</td>
+  <td>Thelonious Monk</td>
+  <td><img class="playBtn" target="audio/norwegian/rose.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/julia.mp3">Julia</a></td>
+  <td>2:52</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/julia.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/jumpin.mp3">Jumpin Jack Fish</a></td>
+  <td>3:56</td>
+  <td>The Rolling Stones</td>
+  <td><img class="playBtn" target="audio/norwegian/jumpin.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/michelle.mp3">Michelle</a></td>
+  <td>2:42</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/michelle.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/nowhere.mp3">Nowhere Man</a></td>
+  <td>2:09</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/nowhere.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/norwegian.mp3">Norwegian Wood</a></td>
+  <td>2:5</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/norwegian.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/pavane.mp3">Pavane for Dead Princess</a></td>
+  <td>2:42</td>
+  <td>Maurice Ravel</td>
+  <td><img class="playBtn" target="audio/norwegian/pavane.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/penny.mp3">Penny Lane</a></td>
+  <td>3:06</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/penny.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/people.mp3">People are Strange</a></td>
+  <td>2:10</td>
+  <td>The Doors</td>
+  <td><img class="playBtn" target="audio/norwegian/people.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/proud.mp3">Proud Mary</a></td>
+  <td>3:10</td>
+  <td>Creedance Clearwater</td>
+  <td><img class="playBtn" target="audio/norwegian/proud.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/raindrops.mp3">Raindrops Keep Falling on My Head</a></td>
+  <td>3:02</td>
+  <td>Burt Bacharach</td>
+  <td><img class="playBtn" target="audio/norwegian/raindrops.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+<tr>
+  <td><a href="audio/norwegian/fair.mp3">Scarborough Fair</a></td>
+  <td>6:27</td>
+  <td>Simon and Garfunkel</td>
+  <td><img class="playBtn" target="audio/norwegian/fair.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/sukiyaki.mp3">Sukiyaki</a></td>
+  <td>3:08</td>
+  <td>Kyu Sakamato</td>
+  <td><img class="playBtn" target="audio/norwegian/sukiyaki.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/impanema.mp3">The Girl From Ipanema</a></td>
+  <td>5:25</td>
+  <td>Antonio Carlos Jobin</td>
+  <td><img class="playBtn" target="audio/norwegian/impanema.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/toccata.mp3">Toccata and Fugue in D Minor, Organ</a></td>
+  <td>8:37</td>
+  <td>Johann Sebastian Bach</td>
+  <td><img class="playBtn" target="audio/norwegian/toccata.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/roof.mp3">Up on the Roof</a></td>
+  <td>2:36</td>
+  <td>The Drifters</td>
+  <td><img class="playBtn" target="audio/norwegian/roof.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/walk.mp3">Walk on By</a></td>
+  <td>2:53</td>
+  <td>Burt Bacharach</td>
+  <td><img class="playBtn" target="audio/norwegian/walk.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/waltz.mp3">Waltz for Debby</a></td>
+  <td>4:29</td>
+  <td>Bill Evans</td>
+  <td><img class="playBtn" target="audio/norwegian/waltz.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/wedding.mp3">Wedding Bell Blues</a></td>
+  <td>2:49</td>
+  <td>Laura Nyro</td>
+  <td><img class="playBtn" target="audio/norwegian/wedding.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/white.mp3">White Room</a></td>
+  <td>2:42</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/white.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/norwegian/yesterday.mp3">Yesterday</a></td>
+  <td>2:30</td>
+  <td>The Beatles</td>
+  <td><img class="playBtn" target="audio/norwegian/yesterday.mp3"  src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+</table>
+
+<table id="playlist3" style="display:none">
+<div class="player3" style="display:none">
+    <audio id="audio" preload="none" tabindex="0" controls loop>
+      <source src="audio/wildsheep/op10inDminor.mp3">
+      <source src="audio/wildsheep/CanoninDmajor.mp3">
+     </audio>
+</div>
+<tr>
+  <th>SONG</th>
+  <th>DURATION</th>
+  <th>ARTIST</th>
+</tr>
+<tr>
+  <td><a href="audio/sputnik/lune.mp3">Claire de Lune</a></td>
+  <td>5:02</td>
+  <td>Claude Debussy</td>
+  <td><img class="playBtn" target="audio/sputnik/lune.mp3" id="play" src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/sputnik/piano.mp3">Piano Concerto No. 1</a></td>
+  <td>17:14</td>
+  <td>Franz Liszt</td>
+  <td><img class="playBtn" target="audio/sputnik/piano.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+<td>
+<tr>
+  <td><a href="audio/sputnik/sonata.mp3">Piano Sonata No. 7 in C</a></td>
+  <td>16:10</td>
+  <td>Wolfgang Amadeus Mozart</td>
+  <td><img class="playBtn" target="audio/sputnik/sonata.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/sputnik/scherzo.mp3">Scherzo No. 2, Op. 31</a></td>
+  <td>8:49</td>
+  <td>Frederic Chopin</td>
+  <td><img class="playBtn" target="audio/sputnik/scherzo.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+<tr>
+  <td><a href="audio/sputnik/arunda.mp3">Take me to Arunda</a></td>
+  <td>2:41</td>
+  <td>Astrud Gilberto</td>
+  <td><img class="playBtn" target="audio/sputnik/arunda.mp3" src="media/play.png"></td>
+  <td><img class="pauseBtn" src="media/bars.png"></td>
+</tr>
+</table>
+
+
+<div id="begin2">
+
+<div class="all" id="description1" style="display:none">
+<div class="title">A WILD SHEEP CHASE</div>
+<blockquote>“Most everything you think you know about me is nothing more than memories”</blockquote>
+<p>An unnamed character is given the task to find a rare sheep that would take him on a journey from Tokyo to Hokkaido. On his way, he meets a girl with seductive ears, his old friend Rat, and stays a night at the Dolphin Hotel.</p>
+</div>
+
+<div class="all" id="description2" style="display:none">
+<div class="title">1Q84</div>
+<blockquote>“Even if we could turn back, we'd probably never end up where we started.”</blockquote>
+<p>It's 1984 in Tokyo, and Aomame has entered a paralleled world, which she calls 1Q84. Her childhood friend Tengo is an aspiring writer who takes on a ghostwriting project. Aomame and Tengo will go on a journey where their narratives will converge.</p>
+</div>
+
+<div class="all" id="description3" style="display:none">
+<div class="title">SPUTNIK SWEETHEART</div>
+<blockquote>“I dream. Sometimes I think that's the only right thing to do.”</blockquote>
+<p>K is in love with Sumire, but Sumire is attracted to an older businesswoman named Miu. One day, Sumire disappears from an island in Greece, and K goes to find her.</p>
+</div>
+
+<div class="all" id="description4" style="display:none">
+<div class="title">NORWEGIAN WOOD</div>
+<blockquote>“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.” </blockquote>
+<p>Set in the late 1960s, Toru develops a romantic attraction with the emotionally troubled Midori after their best friend Kizuki died. The story revolves around the themes of coming-of-age and loss. </p>
+</div>
+
+</div>
+
+
+<div class="background2">
+</div>
+
+
+<div class="background3">
+
+
+<script> // murakami bio
+
+    $(document).ready(function() {
+        $("div.background3").hover(function() {
+          $("div#bio").fadeIn('slow');
+        });
+
+        $(".common" ).on('click', function() {
+             $(".common").not(this).toggle(400, function() {
+                 
+             });
+        });
+    });
+</script>
+
+
+<div id="bio" style="display:none; color: white">
+Haruki Murakami is a contemporary Japanese writer whose most popular books include Norwegian Wood, Kafka on the Shore, The Wind-Up Bird Chronicle, and 1Q84. Influenced by writers like Raymond Chandler, Kurt Vonnegut, Franz Fitzgerald, Raymond Carver, Murakami is often criticized by Japan's literary establishment as being un-Japanese. His stories often revolve around surrealism, magic realism, and science fiction. Murakami studied drama at Waseda University in Tokyo. He is currently 64.
+</div>
+
+</div>
+
+</body>
+</html>
