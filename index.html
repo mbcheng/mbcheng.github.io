@@ -22,17 +22,31 @@
   <link rel="stylesheet" type="text/css" href="../mbcheng.github.io/css/landing.css" >
   <link rel="shortcut icon" href="favicon.ico"/>
  
- </head>
+</head>
 <body>
-	<div class="title">Michelle Cheng</div>
+
+
+<div class="title">Michelle Cheng</div>
 
 <hr>
 
 <a href="about.html" class="subtitle">Digital Storyteller</a>
-<br><span style="font-size: 18px; letter-spacing: 4px">📝📰💻</span>
+<br><div class="icons">📝📰💻</div>
 
-<!-- Custom JS scripts. -->
-<script src="js/script.js"></script>
+<script>
+var $sub = $(".subtitle:first"), text = $.trim($sub.text()),
+    words = text.split(" "), html = "";
+
+for (var i = 0; i < words.length; i++) {
+    html += "<span>" + words[i] + ((i+1) === words.length ? "" : " ") + "</span>";
+};
+$sub.html(html).children().hide().each(function(i){
+  $(this).delay(i*700).fadeIn(1000);
+});
+
+</script>
+
+
 
 </body>
 </html>
