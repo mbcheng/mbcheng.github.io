@@ -30,6 +30,15 @@ hr {
 	margin-left:186px;
 }
 
+@media (max-width:1199px)  {
+	.subtitle {
+		text-align:center;
+		display:inline-block;
+		margin-left:30%;
+		margin-right:30%;
+	}
+}
+
 .icons {
 	text-align:center;
 	font-size: 18px; 

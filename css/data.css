@@ -1,0 +1,253 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px;
+}
+
+h3 {
+  margin-top: 60px;
+}
+
+h1 {
+  margin-top: 30px;
+}
+.container {
+  margin-top:10px;
+  margin-bottom:0px;
+}
+
+IMG.img-centered {
+  float: left;
+  margin-right: 20px;
+  padding: 0px;
+}
+
+IMG.newstrack {
+  margin: auto;
+}
+
+.navbar-default {
+  border-color: transparent;
+  background-color: #fff;
+  -webkit-box-shadow:0px 3px 4px #999999;
+  -moz-box-shadow:0px 3px 4px #999999;
+  box-shadow:0px 3px 4px #999999;
+  text-align: center;
+}
+
+.navbar-default .nav li a {
+  color: #000;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 15px 10px;
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  display:inline-block;
+  outline: 0;
+  text-decoration: none;
+}
+
+
+.bio {
+  margin-top:0px;
+  text-align: left;
+
+}
+
+#nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+
+a {
+  color: #33CCFF;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+p.italic {
+    font-style: italic;
+    font-color: #bfbfbf;
+}
+
+
+.jumbotron {
+  background-image:
+  url('https://cloud.githubusercontent.com/assets/12566452/8265916/867605a0-16dd-11e5-9fd2-9aea849fe8ed.jpg');
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: auto;
+  max-height: auto;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:200px;
+  margin:0px
+  padding:0px;
+}
+
+.jumbotron h1{
+  color: #000000;
+  font-size: 48px;  
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 22px;
+  color: #000000;
+  font-family: 'Arial', sans-serif;
+  text-align: right;
+  padding: 20px;
+  font-weight: bold;
+}
+
+
+#about .container {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+#work .container {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+img.grayscale {
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* Firefox 35+ */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+/* Disable grayscale on hover */
+img.grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
+
+
+.container .box {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.box h2{
+  font-family: 'Arial', sans-serif;
+  border-style: solid;
+  border-width: 5px;
+  color: black;
+  text-transform: uppercase;
+  width: 350px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0px;
+}
+
+
+#social .container-fluid {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-image:
+  url('https://cloud.githubusercontent.com/assets/12566452/8270018/37a1db1c-1795-11e5-83bd-e60f63e86bc3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  text-align: center;
+  max-width: auto;
+}
+
+.social-links{
+  margin-top:70px;
+  word-spacing: 10px;
+}
+
+.email,.codex, .mochi, .nyf, .quad, .usatoday{
+  text-align: center;
+  padding-top: 40px;
+}
+
+.resume {
+  text-align: left;
+  padding-top: 40px;
+}
+
+.resume b {
+  color: #33CCFF;
+}
+
+.datastory{
+  padding-top: 80px;
+  padding-bottom: 40px;
+  font-size: 16px;
+}
+
+.datastory h3, h2, h4{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px #b3b3b3;
+    border-collapse: collapse;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #eee;
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.footer {
+  font-size: 15px;
+  margin: 0px;
+  font-weight: bold;
+  text-align: center;
+
+}
