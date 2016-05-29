@@ -32,7 +32,7 @@ header a:hover {color: gray;}
 
 .subtitle {
   margin-top:10px;
-  font-size:12px;
+  font-size:12.5px;
   display:block;
   text-align: center;
   color: #3399ff;
@@ -139,8 +139,8 @@ a:link {
 }
 
 aside {
-	padding:20px;
-  margin-top: 10px;
+	padding:10px;
+  margin-top: 30px;
 	height:400px;
 	width:200px;
 }
@@ -152,6 +152,10 @@ aside {
 
 .little_title {
   text-align:center;
+}
+
+.img-circle {
+  border-radius: 50%;
 }
 
 .other a {
@@ -195,9 +199,6 @@ aside, section {
   word-wrap: break-word;
 }
 
-b {
-  text-decoration: underline;
-}
 
 .social {
   padding-top: 8px;
@@ -383,3 +384,4 @@ div.container a:hover:after{
 .murakami:hover{
   opacity:.5;
 }
+
