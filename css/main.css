@@ -385,3 +385,9 @@ div.container a:hover:after{
   opacity:.5;
 }
 
+footer {
+  padding-top: 30px;
+  text-align:center;
+  font-size: 11.5px;
+}
+
