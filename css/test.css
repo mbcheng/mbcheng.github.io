@@ -27,7 +27,7 @@ nav li {
 }
 
 .headline:hover {
-  background: -webkit-linear-gradient(#cc66ff, #3333ff);
+  background: gradient(#cc66ff, #3333ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -38,7 +38,7 @@ h2 a {
 }
 
 .dot_underlined:hover {
-  background: -webkit-linear-gradient(#cc66ff, #3333ff);
+  background: linear-gradient(#cc66ff, #3333ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -46,12 +46,13 @@ h2 a {
 
 .subtext {
   text-align: center;
-  margin-right:14%;
-  margin-left:14%;
+ 
 
-  background: -webkit-linear-gradient(#cc66ff, #3333ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(top, #cc66ff, #3333ff);
+  background: linear-gradient(top, #cc66ff, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 .bio_container {
@@ -182,14 +183,6 @@ footer {
   font-size:16px;
 }
 
-#link li:hover {
-    -o-transition:.4s;
-    -ms-transition:.4s;
-    -moz-transition:.4s;
-    -webkit-transition:.4s;
-    transition:.4s;
-
-}
 
 #link a:after {
   content: '';
