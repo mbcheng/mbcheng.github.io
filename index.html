@@ -5,48 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Michelle Cheng">
-  <meta name="keywords" content="Michelle Cheng Journalist Boston University"> 
-  <meta name="description" content="portfolio">
+  <meta name="keywords" content="Michelle Cheng Journalist Portfolio'"> 
+  <meta name="description" content="Portfolio">
   
   <title>Michelle Cheng</title>
   
-  <script src="http://code.jquery.com/jquery-2.1.3.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script> 
- 
-<!--Google fonts-->  
-  <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <!-- custom Google font -->
+<link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <!--custom CSS-->
-  <link rel="stylesheet" type="text/css" href="../mbcheng.github.io/css/landing.css" >
+  <link rel="stylesheet" type="text/css" href="../TEST/css/landing.css">
   <link rel="shortcut icon" href="favicon.ico"/>
  
-</head>
+ </head>
 <body>
 
+<div class="container-fluid">
+    <div class="col-sm-12 text-center">
 
 <div class="title">Michelle Cheng</div>
 
 <hr>
 
-<a href="about.html" class="subtitle">Digital Storyteller</a>
-<br><div class="icons">📝📰💻</div>
+<div class="sign" style="display:none;">
+<a href="about.html">Journalist</a>
+</div>
+
+
 
 <script>
-var $sub = $(".subtitle:first"), text = $.trim($sub.text()),
-    words = text.split(" "), html = "";
 
-for (var i = 0; i < words.length; i++) {
-    html += "<span>" + words[i] + ((i+1) === words.length ? "" : " ") + "</span>";
-};
-$sub.html(html).children().hide().each(function(i){
-  $(this).delay(i*700).fadeIn(1000);
-});
+$(document).ready(function() {
+  $('.sign').fadeIn(1200);
+  });
 
 </script>
 
-
+<div class="social">
+<a href="https://www.linkedin.com/in/mbcheng"><img style="max-width:30px;padding:5px" src="images/linkedin.png"></a>
+<a href="https://www.facebook.com/michelle.cheng15"><img style="max-width:30px;padding:5px" src="images/facebook.png"></a>
+<a href="https://www.instagram.com/michellebrittany15/"><img style="max-width:30px;padding:5px" src="images/instagram.png"></a>
+<a href="https://twitter.com/mbcheng15"><img style="max-width:30px;padding:5px" src="images/twitter.png"></a>
+<a href="https://github.com/mbcheng"><img style="max-width:30px;padding:5px" src="images/github.png"></a>
 
 </body>
 </html>
+

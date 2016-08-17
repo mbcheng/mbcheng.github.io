@@ -1,7 +1,14 @@
 body {
-	font-family: 'Quicksand', sans-serif;
-	margin-left: 30%;
-	margin-right: 30%;
+	background: url(../images/paper.jpg) no-repeat center center fixed ;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+
+}
+
+.container {
+  text-align:center;
 }
 
 
@@ -23,30 +30,14 @@ hr {
   width:30%;
 }
 
-.subtitle {
-	padding-bottom: 10px;
-	font-weight: 400;
-	text-align:left;
-	margin-left:186px;
-}
 
-@media (max-width:1199px)  {
-	.subtitle {
-		text-align:center;
-		display:inline-block;
-		margin-left:30%;
-		margin-right:30%;
-	}
-}
-
-.icons {
-	text-align:center;
-	font-size: 18px; 
-	letter-spacing: 4px;
+.social {
+	margin-top: 100px;
 }
 
 a {
-	color: #3399ff;
+	font-size:16px;
+	color: #6666ff;
 	-o-transition:.4s;
 	-ms-transition:.4s;
 	-moz-transition:.4s;
@@ -54,7 +45,7 @@ a {
 	transition:.4s;
 }
 
-a:hover {color: gray;}
+a:hover {color: #f2f2f2;}
 
 a:link {
     text-decoration: none;
