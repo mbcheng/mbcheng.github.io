@@ -71,7 +71,13 @@ h2 a {
   text-align: center;
 }
 
+p {
+  padding: 0 0 0px;
+}
 
+br {
+  padding: 0 0 5px;
+}
 
 .bio {
   width:580px;
