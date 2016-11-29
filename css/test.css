@@ -246,6 +246,11 @@ a .subtitles {
   font-size:16px;
 }
 
+.description {
+  width:200px;
+  padding-bottom:10px;
+}
+
 
 br .description {
   padding: 0px;
