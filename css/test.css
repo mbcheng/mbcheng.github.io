@@ -190,6 +190,7 @@ footer {
 }
 
 
+
 #link a:after {
   content: '';
   position: absolute;
@@ -232,6 +233,10 @@ a:hover {color: #f2f2f2;}
 }
 
 a .subtitles {
+  font-size:18px;
+}
+
+a .description {
   font-size:18px;
 }
 
