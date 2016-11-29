@@ -183,7 +183,7 @@ footer {
   
 
 }
-.subtitles #link li a {
+#link li a {
   text-decoration:none;
   padding-bottom: 4px;
   font-size:18px;
@@ -218,6 +218,7 @@ footer {
 
   text-decoration: none;
   position: relative;
+
 }
 
 a:hover {color: #f2f2f2;}
