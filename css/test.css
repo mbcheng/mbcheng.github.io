@@ -183,7 +183,7 @@ footer {
   
 
 }
-#link li a {
+.subtitles #link li a {
   text-decoration:none;
   padding-bottom: 4px;
   font-size:18px;
