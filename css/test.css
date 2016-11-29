@@ -240,10 +240,14 @@ a .subtitles {
   padding: 0px;
 }
 
+a.description {
+  font-size:18px;
+}
+
 br .description {
   padding: 0px;
 }
 
-.data_headline{
+a.data_headline{
   font-size:18px;
 }
