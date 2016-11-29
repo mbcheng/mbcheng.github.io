@@ -240,6 +240,10 @@ a .subtitles {
   padding: 0px;
 }
 
+br .description {
+  padding: 0px;
+}
+
 a .description {
   font-size:18px;
 }
