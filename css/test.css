@@ -120,6 +120,7 @@ h3 {
 .stories_writing_content {
   margin-left:200px;
   margin-right:200px;
+  display: center;
 }
 
 
@@ -194,7 +195,6 @@ ul {
 #link ul {
   display:block;
   width:600px;
-  display: center;
 }
 
 }
