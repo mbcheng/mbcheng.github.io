@@ -119,7 +119,7 @@ h3 {
 
 .stories_writing_content {
   display:center;
-  width:600px;
+  width:400px;
 }
 
 
@@ -189,12 +189,12 @@ footer {
 
 ul {
   display:inline;
-  width:600px;
+  width:400px;
 }
 
 #link ul {
   display:center;
-  width:600px;
+  width:400px;
 }
 
 }
@@ -202,7 +202,7 @@ ul {
   text-decoration:none;
   padding-bottom: 4px;
   font-size:16px;
-  width: 600px;
+  width: 400px;
 }
 
 
