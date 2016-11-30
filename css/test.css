@@ -196,6 +196,7 @@ ul {
 
 #link li {
   display: block;
+  white-space: nowrap;
   
   
 
