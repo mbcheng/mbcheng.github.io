@@ -186,6 +186,10 @@ footer {
 
 --
 
+ul {
+  display:inline;
+}
+
 #link ul {
   display:block;
 }
