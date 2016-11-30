@@ -191,14 +191,8 @@ ul {
 }
 
 #link ul {
-  white-space: pre-wrap;
+  display:block;
 }
-
-#link li {
-  display: block;
-  white-space: nowrap;
-  
-  
 
 }
 #link li a {
