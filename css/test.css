@@ -118,8 +118,7 @@ h3 {
 }
 
 .stories_writing_content {
-  margin-left:120px;
-  margin-right:120px;
+  display:center;
 }
 
 
@@ -194,6 +193,8 @@ ul {
 #link ul {
   display:center;
   width:600px;
+  margin-left: 120px;
+  margin-right:120px;
 }
 
 }
