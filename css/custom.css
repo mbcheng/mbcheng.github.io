@@ -17,7 +17,7 @@ img.img-circle {
   margin-right: auto;
 }
 
-.social {
+img.social {
   margin-left: 50px;
   margin-top:16px;
 
@@ -73,7 +73,7 @@ padding-left:140px;
 
 div.img {
     float: left;
-    width: 300px;
+    width: 270px;
     margin:10px;
 }
 
